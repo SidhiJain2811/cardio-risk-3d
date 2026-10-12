@@ -182,4 +182,4 @@ python -m pytest tests/ -v
 1. **Cohort Sample Size**: Trained on the UCI Z-Alizadeh Sani cohort ($N=303$). While stratified cross-validation and calibration were enforced, prospective multi-center studies are necessary to evaluate demographic drift across diverse Indian populations.
 2. **Tabular vs. Imaging**: Predictions are statistical estimates from clinical measurements. 3D heart visualizations are schematic overlays, not direct radiological reconstructions (CT/angiography).
 3. **No Direct Interventions**: This software does not prescribe pharmacological treatments (statins, aspirin, beta-blockers) or book cath lab admissions.
-4. **Regulatory Status**: Developed solely for the IIT Mandi Multimodal AI Hackathon 2026. Not cleared by CDSCO as Software as a Medical Device (SaMD).
+
