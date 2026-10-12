@@ -1,0 +1,178 @@
+/* CardioAI Clinical Dashboard Styles */
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #070b13;
+  color: #f1f5f9;
+}
+
+/* Custom Scrollbar */
+.custom-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: #090e18;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Input Fields */
+.input-field {
+  background-color: #090e18;
+  border: 1px solid #1e293b;
+  border-radius: 0.5rem;
+  padding: 0.35rem 0.5rem;
+  color: #f8fafc;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  transition: all 0.15s ease;
+}
+.input-field:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.4);
+}
+
+/* Tool Buttons in 3D Viewport */
+.tool-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 0.5rem;
+  padding: 0.375rem 0.625rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+}
+.tool-btn:hover {
+  background-color: rgba(30, 41, 59, 0.95);
+  color: #ffffff;
+  border-color: #3b82f6;
+}
+.tool-btn.active {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #3b82f6;
+}
+
+/* Right Layer Thumbnail Cards */
+.layer-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(51, 65, 85, 0.6);
+  border-radius: 0.625rem;
+  padding: 0.375rem;
+  font-size: 0.625rem;
+  font-weight: 500;
+  color: #94a3b8;
+  width: 3.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: all 0.2s ease;
+  text-align: center;
+}
+.layer-card:hover {
+  border-color: #3b82f6;
+  color: #f1f5f9;
+  transform: translateX(-2px);
+}
+.layer-card.active {
+  border-color: #3b82f6;
+  background-color: rgba(30, 58, 138, 0.4);
+  color: #60a5fa;
+}
+
+/* 3D Overlaid Callout Badges */
+.callout-pointer-dot {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+  box-shadow: 0 0 10px currentColor;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Legend Pills */
+.legend-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.625rem;
+  border-radius: 9999px;
+  backdrop-filter: blur(8px);
+  font-size: 0.6875rem;
+  font-weight: 500;
+}
+
+/* Metric Cards */
+.metric-card {
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.25rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+.metric-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Export Buttons */
+.export-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border-width: 1px;
+  border-radius: 0.75rem;
+  padding: 0.625rem 0.375rem;
+  background-color: #0d1424;
+  text-align: center;
+  line-height: 1.2;
+  transition: all 0.2s ease;
+}
+.export-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Circular Gauge Animation */
+#overallArc {
+  transition: stroke-dashoffset 0.8s cubic-bezier(0.4, 0, 0.2, 1), stroke 0.4s ease;
+}
+
+/* Print Styles */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #reportModal, #reportModal * {
+    visibility: visible;
+  }
+  #reportModal {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: white;
+    color: black;
+  }
+}
