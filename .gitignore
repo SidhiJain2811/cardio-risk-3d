@@ -85,3 +85,4 @@ desktop.ini
 *.temp
 scratch/
 scratch_*.json
+cloudflared.exe
